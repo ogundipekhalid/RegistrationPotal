@@ -1,0 +1,71 @@
+@model MovieMvcDate.Models.Dto.RequestModel.BookingsResponceModels
+
+     @if(ViewData["Title"] != null)
+    {
+        <h2>
+            @TempData["success"]
+        </h2>
+
+    }
+
+
+
+<div class="container p-3">
+<div class ="row pt-4">
+    <div class = "col-6">
+        <h2 class = "text-primary">All Bookings</h2>
+    </div>
+    <div>
+    <table class="table table-bordered table-striped" style="width:100%">
+        <thead>
+            <tr>
+                <th>
+                    Id
+                </th>
+                <th>
+                    MovieName
+                </th>
+        
+                <th>
+                    SitNumber
+                </th>
+                <th>
+                    Price
+                </th>
+            </tr>
+            @foreach (var booking in Model.Data)
+            {
+                <tr>
+                    <td>
+                        @booking.Id
+                    </td>
+                    <td>
+                        @booking.MovieName
+                    </td>
+                    <td>
+                        @booking.SitNumber
+                    </td>
+                    <td>
+                        @booking.Price
+                    </td>
+                    <td>
+                        <a onclick="myFuntion()" asp-controller = "Booking" asp-action = "DeleteBooking" asp-route-Id = "@booking.Id"><i class ="bi bi-trash"></i>Delete  </a>
+                    </td>
+                    <td>
+                        <a onclick="myFuntion()" asp-controller = "Booking" asp-action = "UpdateBooking" asp-route-Id = "@booking.Id"><i class ="bi bi-penil-fill"></i>UpdateAdmin</a>
+                    </td>
+                    <td>
+                        <a asp-controller = "Booking" asp-action = "Details" asp-route-Id = "@booking.Id"><i class ="bi bi-info-lg"></i> Details </a>
+                    </td>
+                    <script>
+                        function myFuntion()
+                        {
+                           alert("Press ok Do you want to proceed ?")  
+                        }
+                    </script>
+                </tr>
+            }
+            </table>
+        </div>
+    </div>
+    </div>

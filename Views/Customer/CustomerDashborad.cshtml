@@ -1,0 +1,189 @@
+
+
+
+<!DOCTYPE html>
+<html lang="en" style="background-color: #d9534f;">
+<head style="background-color: currentColor;">
+    <meta charset="UTF-8">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <style>
+        .sidebar {
+            background-image: url('wwwroot\image\istockphoto-.jpg');
+            height: 100%;
+            position: fixed;
+            left: 0;
+            top: 80px;
+            width: 200px;
+            z-index: 1;
+            overflow-x: hidden;
+            padding-top: 20px;
+           color: #ffffffa8;
+            background-color:#333;
+        }
+        
+        .sidebar ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .sidebar li {
+            font-size: 16px;
+            padding: 12px 16px;
+        }
+
+        .sidebar li a {
+            display: block;
+            color: #ffffff;
+            padding: 12px 16px;
+            text-decoration: none;
+        }
+
+        .sidebar li a:hover {
+            background-color: #555;
+            color: white;
+        }
+
+        .sidebar .dropdown {
+            display: block;
+        }
+
+        .sidebar .dropdown-content {
+            display: none;
+            background-color: #f1f1f14b;
+            min-width: 160px;
+            z-index: 1;
+            position: absolute;
+            left: 200px;
+            top: 0;
+        }
+                .sidebar li.dropdown ul.dropdown-content li:last-child {
+            border-bottom: none;
+        }
+
+        .sidebar .dropdown:hover .dropdown-content {
+            display: block;
+        }
+    </style>
+</head>
+<body  style="background-color: #d9534f;">
+<div class="sidebar">
+    <ul>
+        <li class="dropnow">
+            <a href="#" > Dashboard</a>
+            <a href="#" > </a>
+            <ul class="dropdown">
+                @* <li><a asp-controller="Customer" asp-action="AddMoneyToWallet" asp-route="">FundWallet</a></li> *@
+                <li><a asp-controller="Booking" asp-action="CreateBooking" >BookHere</a></li>
+                @* <li><a asp-controller="Customer" asp-action="Details" > Details </a></li> *@
+                <li><a asp-controller="Customer" asp-action="Get">Profile</a></li>
+            </ul>
+        </li>
+    </ul>
+     <div class="contain">
+                            <div>
+                                <li class="nav-item">
+                                    <a class="nav-link text-dark" style="color: #ffffff;" asp-area="" asp-controller="Home"
+                                        asp-action="LogOut">LogOut</a>
+                                </li>
+                            </div>
+                        </div>
+
+</div>
+  
+</body>
+
+@* <div class="container">
+    <div class="text-center">
+        <h1>Welcome to the Dashboard</h1>
+    </div>
+
+    <div style="display: flex; gap: 50px;">
+        <div>
+            <a asp-controller="Booking" asp-action="CreateBooking"></a>
+
+    </div> *@
+
+
+
+
+
+
+
+
+
+@* <style>
+      .overlay {
+    position: absolute; 
+    bottom: 0; 
+    background: rgba(63, 28, 28, 0.644);
+    background: rgba(114, 44, 44, 0.5); /* Black see-through */
+    color: #868d24ef; 
+    width: 100%;
+    transition: .5s ease;
+    opacity:0;
+    color: rgba(255, 255, 255, 0.568);
+    font-size: 20px;
+    padding: 20px;
+    text-align: center;
+  }
+      #trans{
+    border: solid pink 1px;
+    width: 150px;
+    height: 100px;
+    background-color: #b5880079;
+    text-align: center;
+  }
+      #trans:hover{
+    background-color: rgb(0, 128, 96);
+  }
+</style> *@
+
+@* @{
+    ViewData["Title"] = "customer Dashboard" ;
+}
+
+@if(TempData.Peek("success") != null )
+{
+    <h3 id="overlay" style="color: #94b13691;">@TempData.Peek("success")</h3>
+}
+else
+{
+    <h3 id="overlay" style="color: #6b581ebe;">@TempData.Peek("error")</h3>
+}
+
+<h3 style = "font-family:cabri;font-size : 20px;">@ViewData["Title"]</h3> *@
+@* <div class="text-center"> *@
+@* </div>
+<br><br><br>
+<div style="display: flex;gap:50px;">
+     <div>
+            <a asp-controller = "Booking" asp-action = "CreateBooking" class = "btn btn-primary">
+                <i class="bi bi-pencil-fill"></i> Booking Here
+            </a>
+</div>
+     <div>
+            <a asp-controller = "Customer" asp-action = "AddMoneyToWallet" class = "btn btn-primary">
+                <i class="bi bi-pencil-fill"></i>>Add Money ToWallet
+            </a>
+        </div>
+     <div>
+            <a asp-controller = "Customer" asp-action = "Get" class = "btn btn-primary">
+                <i class="bi bi-pencil-fill"></i>>Add Money ToWallet
+            </a>
+        </div>
+
+
+</div> *@
+
+
+    @* <h1  style = "font-family:cabri;font-size : 60px;"class="display-4">Welcome</br>To customer Dashboard  </h1> *@
+
+
+
+
+

@@ -1,0 +1,25 @@
+
+<h2> play here </h2>
+<!DOCTYPE html>
+<html>
+<head>
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="container">
+        
+        @foreach(var item in Model)
+        {
+            <div class="col-sm-4 col-md-4 col-xs-12">
+                <div class="modal-MovieName" style="width:250px;">@item.</div>
+                <hr/>
+                <div class="video-frame">
+                    <video style="width:250px; height:150px;" controls>
+                        <source src="C:\Users\owner\Desktop\MovieMvcDate\MovieMvcDate\wwwroot\Videos" type="video/mp4" />
+                    </video>
+                </div>
+            </div>
+        }
+    </div>
+</body>
+</html>

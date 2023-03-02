@@ -1,0 +1,61 @@
+﻿
+
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<body style="background-color: cornsilk;">
+
+    <div class="container-fluid">
+        <div class="row justify-content-center align-items-center">
+            <div class="col-md-6 text-center">
+                @* <h2>@ViewData["Title"]</h2> *@
+                <p class="lead">Welcome to Dilakh Media</p>
+
+                <div class="btn-group" role="group">
+                    <a asp-controller="Home" asp-action="LogIn" class="btn btn-primary">Login</a>
+                    <a asp-controller="Customer" asp-action="CreateCustomer" class="btn btn-secondary">Sign Up</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        h2 {
+            font-weight: bold;
+        }
+
+        .lead {
+            margin-bottom: 30px;
+        }
+
+        .btn {
+            border-radius: 5px;
+            padding: 10px 20px;
+            text-decoration: none;
+        }
+
+        .btn-primary {
+            background-color: #007bff;
+            color: #fff;
+            margin-right: 10px;
+        }
+
+        .btn-secondary {
+            background-color: #6c757d;
+            color: #fff;
+        }
+    </style>
+
+</body>
+
+
+
+
+
+

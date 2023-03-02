@@ -1,0 +1,77 @@
+   @model IEnumerable<MovieMvcDate.Models.Entites.User>
+   @if(ViewData["Title"] != null)
+    {
+        <h2>
+            @TempData["success"]
+        </h2>
+
+    }
+   
+    <div class="container p-3">
+        <div class ="row pt-4">
+            <div class = "col-6">
+                <h2 calss = "text-primary">All Users of The Application</h2>
+            </div>
+            <div>
+                <table class= "table table-bordered table-striped" style= "width:100%">
+                    <thead>
+                        <tr>
+                             <th>
+                                S/N
+                            </th>
+                             <th>
+                                FirstName
+                            </th>
+                             <th>
+                                LastName
+                            </th>
+                             <th>
+                                Email
+                            </th>
+                             <th>
+                               Password
+                            </th>
+                             <th>
+                               IsActive
+                            </th>
+                            
+                        </tr>    
+                        
+                    </thead>
+                    @foreach (var user in Model)
+                    {
+                        <tr>
+                            <td>
+                                @user.Id
+                            </td>
+                             <td>
+                                @user.FirstName
+                            </td>
+                             <td>
+                                @user.LastName
+                            </td>
+                             <td>
+                                @user.Email
+                            </td>
+                             <td>
+                                @user.Role
+                            </td>
+                             <td>
+                                @user.IsActive
+                            </td>
+                             
+                        </tr>
+                            
+                    }
+
+                </table>
+            </div>
+
+        </div>
+ </div>
+
+       <div class="nav-item">
+                        <a class="nav-link text-dark" asp-area="" asp-controller="Admin"
+                            asp-action="AdminDashboard"><button class="Admin"> Back
+                            </button></a>
+                    </div> 

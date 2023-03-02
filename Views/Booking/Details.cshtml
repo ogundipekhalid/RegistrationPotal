@@ -1,0 +1,39 @@
+@using MovieMvcDate.Models.Dto.RequestModel
+@model BookingCustomerDto
+
+
+<div>
+    <h6>Details of admin</h6>
+    <hr/>
+   <dl>
+    <dt>
+    </dt>
+         <dt>
+            <h4>@Html.DisplayNameFor( model=>model.MovieName): </h4>
+        </dt>
+         <dd>
+            <h4>@Html.DisplayFor( model=>model.MovieName ) </h4>
+        </dd>
+        <dt>
+            <h4>@Html.DisplayNameFor( model=>model.SitNumber ) :</h4>
+        </dt>
+          <dd>
+            <h4>@Html.DisplayFor(model =>model.SitNumber) </h4>
+        </dd>
+        </dt>
+          <dd>
+            <h4>@Html.DisplayNameFor(model=> model.Price) : </h4>
+        </dd>
+        </dt>
+          <dd>
+            <h4>@Html.DisplayFor(model=> model.Price) </h4>
+        </dd>
+        @* <dt>
+          <h4>@Html.DisplayNameFor(model => model.Password) :  </h4>
+        </dt>
+        <dd>
+          <h4>@Html.DisplayFor(model => model.Password) </h4>
+        </dd> *@
+   </dl>
+</div>
+   <button style="background-color: slateblue;" ><a asp-controller= "Admin" asp-action="GetAllAdmin">Back to List</a></button>

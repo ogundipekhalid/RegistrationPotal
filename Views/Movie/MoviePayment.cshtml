@@ -1,0 +1,52 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Movie Payment</title>
+    <style>
+        /* CSS styles for the view */
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        .container {
+            margin: auto;
+            max-width: 600px;
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        input[type="submit"] {
+            background-color: #4CAF50;
+            border: none;
+            color: white;
+            padding: 10px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin-top: 20px;
+            cursor: pointer;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Movie Payment</h1>
+        <form method="post" a asp  action="MoviePayment">
+            <label for="price">Price:</label>
+            <input type="text" id="price" name="price"  />
+            <label for="balance">Your Balance:</label>
+            <input type="text" id="balance" name="balance" />
+             </form>
+    </div>
+</body>
+</html>

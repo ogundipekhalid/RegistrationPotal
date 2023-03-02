@@ -1,0 +1,40 @@
+@model MovieMvcDate.Models.Dto.RequestModel.BookingCustomerDto
+
+<div>
+    <p>Edit Admin</p>
+        <hr>
+        @* <div asp-controller = "Admin" asp-action= "UpdateAdmin"style="font-size: 100%;"> *@
+        <form asp-action ="UpdateBooking" >
+           <div>
+             <div class ="md -2"></div>
+            <input asp-for ="Id" name="Id" value="@Model.Id" hidden/>
+        </div>
+        <div>
+             <div class ="md-2"></div>
+             <label asp-for = "MovieName"></label>
+            <input asp-for ="MovieName" name="MovieName" value="@Model.MovieName"/>
+        </div>
+       <div>
+            <div class ="md-2"></div>
+            <label >Price</label>
+            <input asp-for ="Price" name="Price"  value="@Model.Price"/>
+        </div>
+        <div>
+            @* <div class ="md-2" style="flex-direction: column;"></div> *@
+            <label asp-for = "SitNumber"></label>
+            <input asp-for ="SitNumber" name="SitNumber" type="SitNumber"  value="@Model.SitNumber" />
+        </div>
+        <div>
+            <div class ="form-group"></div>
+            @* <input href ="myModal" name="" type="submit" class = "form-control" value="@Model.Id" hidden/> *@
+            <input href="#myModal" type="submit" value="Submit" class="btn btn-success trigger-btn col-sm-12" data-toggle="modal" />
+        </div>
+        <div>
+            </button>
+            @* <button type="Submit" value="Submit"> *@
+                @* <a asp-action="UpdateAdmin" asp-route-adminId=@Model.Id type="submit"></a> *@
+                   <a asp-controller="Booking" asp-action="UpdateBooking">Back to List</a>
+            </button>
+        </div>
+    </form>
+</div>

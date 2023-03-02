@@ -1,0 +1,91 @@
+@model MovieMvcDate.Models.Dto.RequestModel.MovieResponceModel
+
+
+<div class="container p-3">
+<div class ="row pt-4">
+    <div class = "col-6">
+        <h2 class = "text-primary">one Movies</h2>
+    </div>
+    <div> <table class="table table-bordered table-striped" style="width:100%">
+        <thead>
+            <tr>
+                <th>
+                    Id
+                </th>
+                <th>
+                    MovieName
+                </th>
+                <th>
+                    Director
+                </th>
+                <th>
+                    Year
+                </th>
+                <th>
+                    MoviePrice
+                </th>
+                <th>
+                   MovieFlieType
+                </th>
+                <th>
+                   TimeCreted
+                </th>
+                @* <th>
+                   Moviedate
+                </th> *@
+            </tr>
+             @* @foreach (var movi in Model)
+            { *@
+                 <tr>
+                    <td>
+                        @Model.Data.Id
+                    </td>
+                    <td>
+                        @Model.Data.MovieName
+                    </td>
+                    <td>
+                        @Model.Data.Director
+                    </td>
+                    <td>
+                        @Model.Data.Year
+                    </td>
+                    <td>
+                        @Model.Data.MoviePrice
+                    </td>
+                    <td>
+                        @Model.Data.MovieFliePath
+                    </td>
+                    <td>
+                        @Model.Data.TimeCreted
+                    </td>
+                    @* <td>
+                       @Model.Moviedate
+                    </td> *@
+                    <td>
+                <td>
+                        <a onclick="myFuntion()" asp-controller = "Movie" asp-action = "GetMoviesById" asp-route-Id = "@Model.Data.Id"><i class ="bi bi-trash"></i> Details  </a>
+            @* }  *@
+                      </td>
+                    </tr>
+                    <head>
+    @* <link href="~/Content/bootstrap.min.css" rel="stylesheet" /> *@
+</head>
+<body>
+    <div class="container">
+        
+        @* @foreach(var item in Model.MovieFliePath)
+        { *@
+            <div class="col-sm-4 col-md-4 col-xs-12">
+                @* <div class="modal-MovieName" style="width:250px;">@item.MovieFliePath</div> *@
+                <hr/>
+                <div class="video-frame">
+                    <video style="width:250px; height:150px;" controls>
+                        <source src="localhost:7150/Videos/@Model.Data.MovieFliePath" type="video/mp4" />
+                    </video>
+                </div>
+            </div>
+        @* } *@
+    </div>
+</body>
+
+            @* } *@

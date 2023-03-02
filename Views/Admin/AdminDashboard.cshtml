@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html style="background-image: url('wwwroot\image\istockphoto-.jpg');">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] Dilakh Media</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" />
+    <style>
+        body {
+            @* background-image: url('wwwroot\image\istockphoto-.jpg'); *@
+            background-color: hsla(0, 0%, 95%, 0);
+           display: flex ;
+           display: inline;
+                       
+        }
+
+        .sidebar {
+            background-color:#333;
+            color: #ffffffa8;
+            @* width: 200px; *@
+            height: 95%;
+            position: fixed;
+            @* top: 0; *@
+            left: 0;
+            padding: 20px;
+        }
+
+        .sidebar ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .sidebar a {
+            color: #ffffffbe;
+            text-decoration: none;
+        }
+
+        .sidebar li.dropdown ul.dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #444;
+            padding: 0;
+        }
+
+        .sidebar li.dropdown:hover ul.dropdown-content {
+            display: block;
+        }
+
+        .sidebar li.dropdown ul.dropdown-content li {
+            padding: 10px;
+            border-bottom: 1px solid #ccc;
+        }
+
+        .sidebar li.dropdown ul.dropdown-content li:last-child {
+            border-bottom: none;
+        }
+
+        .content {
+            margin-left: 220px;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="sidebar" style="background-image: url('wwwroot\image\istockphoto-.jpg');">
+        <ul>
+            <li class="dropdown">
+                <a href="#">Admin Dashboard</a>
+                <ul class="dropdown-content">
+                    <li><a asp-controller="Home" asp-action="Users">All Users</a></li>
+                    <li><a asp-controller="Customer" asp-action="GetAllCustomer">All Customers</a></li>
+                    <li><a asp-controller="Movie" asp-action="Create">Create Movie</a></li>
+                    @* <li><a asp-controller="Customer" asp-action="Customers">Manage Customer</a></li> *@
+                </ul>
+            </li>
+            <!-- other links -->
+             <div class="contain">
+                            <div>
+                                <li class="nav-item">
+                                    <a class="nav-link text-dark" asp-area="" asp-controller="Home"
+                                        asp-action="LogOut">LogOut</a>
+                                </li>
+                            </div>
+                     </div>
+        </ul>
+    </div>
+
+    @* <div class="content" > *@
+        @* <ul>
+            <h1 style="background-color: rgba(110, 33, 197, 0.644);"></h1>
+        </ul> *@
+        <!-- content goes here -->
+    @* </div> *@
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,67 @@
+@* @model MovieMvcDate.Models.Dto.RequestModel.CustomerDto *@
+@* @using MovieMvcDate.Models.Dto.RequestModel
+@model CreateCustomerRequestmodel *@
+@model MovieMvcDate.Models.Dto.RequestModel.CreateCustomerRequestmodel
+@{
+    ViewData["Title"] = "Details";
+}
+
+<div>
+    <h6>Customer Details </h6>
+    <hr/>
+   <dl class="row">
+         <dt  class="col-sm-2">
+           <h4> @Html.DisplayNameFor( model=>model.FirstName): </h4>
+        </dt>
+         <dd class="col-sm-10">
+            <h4>@Html.DisplayFor( model=>model.FirstName ) </h4> 
+        </dd>
+        <dt  class="col-sm-2">
+            <h4>@Html.DisplayNameFor( model=>model.LastName ) </h4>
+        </dt>
+          <dd class="col-sm-10">
+            <h4>@Html.DisplayFor(model =>model.LastName) </h4>
+        </dd>
+         <dt class="col-sm-2">
+            <h4>@Html.DisplayNameFor(model => model.Email) </h4>
+        </dt >
+          <dd class="col-sm-10">
+            <h4>@Html.DisplayFor(model=> model.Email) </h4>
+        </dd>
+        </dt>
+          <dd class="col-sm-2">
+            <h4>@Html.DisplayNameFor(model=> model.PhoneNumber) </h4>
+        </dd>
+        </dt>
+          <dd class="col-sm-10">
+            <h4>@Html.DisplayFor(model=> model.PhoneNumber) </h4>
+        </dd>
+        <dt>
+          <dd class="col-sm-2">
+            <h4>@Html.DisplayNameFor(model=> model.Balance) </h4>
+        </dd>
+        </dt>
+          <dd class="col-sm-10">
+            <h4>@Html.DisplayFor(model=> model.Balance) </h4>
+        </dd>
+        <dt>
+          @* <dd>
+            <h4>@Html.DisplayNameFor(model => model.Password): </h4>
+          </dd>
+          <dd>
+            <h4>@Html.DisplayFor(model => model.Password): </h4>
+          </dd> *@
+        </dt>
+   </dl>
+</div>
+     
+    @* <form asp-action="Details" asp-route-AdminId=@Model.Id>
+        <input type="submit" value="Details" class="btn btn-danger" /> |
+        <a asp-action="Index">Back to List</a>
+    </form>  *@
+    @* <a asp-action="Update" asp-route-Id ="@Model.Id" class="btn btn-success">Update</a>  *@
+    <a  asp-controller = "Customer" asp-action = "UpdateCustomer" asp-route-Id = "@Model.Id" class="btn btn-success" > Edit </a>
+    <a  asp-controller = "Customer" asp-action = "AddMoneyToWallet" asp-route-Id = "@Model.Id" class="btn btn-success"> AddMoneyToWallet </a>
+    @* <a asp-action="AddMoneyToWallet" asp-route-Id ="@Model.Id" class="btn btn-success">Fund My Wallet</a> *@
+    <a asp-action="Details" class="btn btn-warning">Back to List</a>
+</div>

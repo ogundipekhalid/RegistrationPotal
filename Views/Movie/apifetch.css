@@ -1,0 +1,14 @@
+#movie-list{
+    display: flex;
+    justify-content: center;
+    padding: 15px;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+.movie-item {
+   flex: 30%;
+}
+
+.movie-item img {
+    max-width: 100%;
+}

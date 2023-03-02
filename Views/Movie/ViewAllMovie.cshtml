@@ -1,0 +1,117 @@
+
+
+
+@model IEnumerable<MovieMvcDate.Models.Entites.Movie>
+
+ @* @if(ViewData["Title"] != null)
+    {
+        <h2>
+            @TempData["success"]
+        </h2>
+
+    } *@
+
+<div class="container p-3">
+<div class ="row pt-4">
+    <div class = "col-6">
+        <h2 class = "text-primary">All Movies</h2>
+    </div>
+    <div>
+         <table class="table" 
+        <thead>
+            <tr>
+                <th>
+                    Id
+                </th>
+                <th>
+                    MovieName
+                </th>
+                <th>
+                    Director
+                </th>
+                <th>
+                    Year
+                </th>
+                <th>
+                    MoviePrice
+                </th>
+                <th>
+                   MovieFlieType
+                </th>
+                <th>
+                   TimeCreted
+                </th>
+                <th>
+                   Moviedate
+                </th>
+            </tr>
+         </thead>
+    <tbody>
+             @foreach (var movi in Model)
+            {
+                 <tr>
+                   <td scope="row">
+                        @movi.Id
+                    </td>
+                    <td scope="row">
+                        @movi.MovieName
+                    </td>
+                    <td scope="row">
+                        @movi.Director
+                    </td>
+                   <td scope="row">
+                        @movi.Year
+                    </td>
+                    <td scope="row">
+                        @movi.MoviePrice
+                    </td>
+                    <td scope="row">
+                        @movi.MovieFliePath
+                    </td>
+                  <td scope="row">
+                        @movi.TimeCreted
+                    </td>
+                    <td scope="row">
+                        @movi.Moviedate
+                    </td>
+                   <td scope="row">
+                        <a onclick="myFuntion()" asp-controller = "Movie" asp-action = "DeleteMovie" asp-route-Id = "@movi.Id"><i class ="bi bi-trash"></i>Delete  </a>
+                    </td>
+                    <td>
+                        <a onclick="myFuntion()" asp-controller = "Movie" asp-action = "UpdateMovie" asp-route-Id = "@movi.Id"><i class ="tn btn-primary"></i>UpdateMovie </a>
+                    </td>
+                    <td>
+                        <a onclick="myFuntion()" asp-controller = "Movie" asp-action = "DetailsMovie" asp-route-Id = "@movi.Id"><i class ="btn btn-danger"></i> Details  </a>
+                    </td>
+                    <td>
+                        <a onclick="myFuntion()" asp-controller = "Movie" asp-action = "GetMoviesById" asp-route-Id = "@movi.Id"><i class ="btn btn-danger"></i> IdMovie</a>
+                    </td>
+                    @* <script>
+                        function myFuntion()
+                        {
+                           alert("Do you can to proceed ?")  
+                        }
+                    </script> *@
+                </tr>
+            }
+         </tbody>
+    </table>
+<form  asp-controller="Movie" asp-action="Create" >
+    <button type="submit" class="btn btn-success">Add new Movie</button>
+</form>
+    
+
+@*         
+@model MovieMvcDate.Models.Dto.RequestModel.
+<div>
+    <h1> display ALL Admin</h1>
+    <p><a asp-action="viewAllMovie"> View ALL Admin</a></p>
+</div>
+
+@foreach (var item in Model)
+{
+    <div>  
+        <h6>@Html.DisplayFor(x => item.) : @Html.DisplayFor(x => item.LastName) : @Html.DisplayFor(x => item.Email) @Html.DisplayFor(x => item.PhoneNumber)
+             <a asp-action="Details" asp-route-Id=@item.Id>View</a>&nbsp;<a asp-action="UpdateAdmin" asp-route-Id=@item.Id>UpdateAdmin</a> &nbsp;<a asp-action="Delete" asp-route-Id=@item.Id>Delete</a></h6>
+    </div>
+} *@

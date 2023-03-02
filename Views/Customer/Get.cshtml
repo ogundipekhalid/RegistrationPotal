@@ -1,0 +1,111 @@
+@model MovieMvcDate.Models.Dto.RequestModel.CreateCustomerRequestmodel
+
+<div class="container p-3">
+<div class ="row pt-4">
+    <div class = "col-6">
+        <h2 class = "text-primary"></h2>
+    </div>
+    <div>
+    <table class="table table-bordered table-striped" style="width:100%">
+        <thead>
+            <tr>
+                 <th>
+                    Id
+                </th> 
+                @* <th>
+                    UserId
+                </th> *@
+                <th>
+                    First Name
+                </th>
+                <th>
+                    Last Name
+                </th>
+                
+                <th>
+                    Email
+                </th>
+                <th>
+                    PhoneNumber
+                </th>
+                <th>
+                    Balance
+                </th>  
+                @* <th>
+                    IsActive
+                </th>   *@
+            </tr>
+        </thead>
+            
+        <tbody class="tbl">
+                <tr class="rows">
+                    <td>
+                        @Model.Id
+                    </td>
+                    <td>
+                        @Model.FirstName
+                    </td>
+                    <td>
+                        @Model.LastName
+                    </td>
+                   
+                    <td>
+                        @Model.Email
+                    </td>
+                    
+                    <td>
+                        @Model.PhoneNumber
+                    </td>
+                    <td>
+                        @Model.Balance
+                    </td>
+                    @* <td>
+                        @Model.IsActive
+                    </td>
+                   *@
+                       <td>
+                @* <a onclick="myFuntion()" asp-controller = "Customer" asp-action = "UpdateCustomer" asp-route-Id = "@Model.Id"><i class ="bi bi-info-lg"></i> Edit </a> *@
+
+                       </td>
+                             <a onclick="myFuntion()" asp-controller = "Customer" asp-action = "Details" asp-route-Id = "@Model.Id"><i class ="bi bi-info-lg"></i> Details </a>
+
+                        <td>
+
+                            @* <a asp-action="AddMoneyToWallet" asp-route-Id ="@Model.Id" class="btn btn-success">Fund My Wallet</a> *@
+                      
+
+@* <a asp-action="FundWallet" method="post" enctype="multipart/form-data"> *@
+    
+@* </form> *@
+                       @* </div>
+                         <span class="nav-item">
+                        <a class="nav-link text-dark" asp-area="" asp-controller="Customer"
+                            asp-action="CustomerDashBoard"><button class="fund"> Back
+                            </button></a>
+                    </span> *@
+
+                @* <div>
+                    <a asp-action="Get" ></a>
+                    <label for="balance">Add money to your wallet:</label>
+                    <input type="number" id="balance" name="balance" step="0.01" min="0" required>
+                </div>
+                <input type="submit" value="Add"> *@
+                        @* <a  asp-controller = "Customer" asp-action = "UpdateCustomer" asp-route-Id = "@Model.Id"><i class ="bi bi-trash"></i>UpdateCustomer</a> *@
+                        @* <a  asp-controller = "Customer" asp-action = "Details" asp-route-Id = "@Model.Id"><i class ="bi bi-trash"></i>UpdateCustomer</a> *@
+                      
+                      @* <span class="nav-item">
+                        <a class="nav-link text-dark" asp-area="" asp-controller="Customer"
+                            asp-action="CustomerDashBoard"><button class="fund"> Back
+                            </button></a> *@
+                    </span> 
+                    </td>
+                </tr>  
+                
+                @* <span class="nav-item">
+                        <a class="nav-link text-dark" asp-area="" asp-controller="Customer"
+                            asp-action="CustomerDashBoard"><button class="fund"> Back
+                            </button></a>
+                    </span> *@
+    </tbody>
+</table>
+                  

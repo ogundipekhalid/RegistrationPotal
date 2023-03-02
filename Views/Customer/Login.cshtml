@@ -1,0 +1,46 @@
+@* @model MovieMvcDate.Models.Dto.RequestModel.CustomerDto
+<head>
+     <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] Dilakh Meadia</title>
+</head>
+
+
+<body>
+    <h3 style="text-align: center ;color :Red;"> @ViewBag.Error</h3>
+ 
+<div class="container">
+    <div class="row justify-content-center">
+        <div class=" card col-md-6">
+            <div class="card-body ">
+                <div class="bg-light">
+                    <h1 class="tagcolor" style="color:mediumblue; font-family:cabri; text-align:center; font-size: 90px;">Login Customer Portal</h1>
+                    <p class="tagcolor" style="color:mediumblue; font-family:cabri; text-align:center; font-size: 45px;">Please fill in this form to Login.</p>
+                    <hr class="tagcolor" style="color:mediumblue">
+
+                </div>
+                <form asp-action="LogIn" enctype="multipart/form-data">
+                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                    <div class="form-row">
+                         </div>
+                        <div style="color:orange; font-family:cabri; text-align:center; font-size: 25px;" class="form-group col-sm-6">
+                            <label asp-for="Email" class="control-label"></label>
+                            <input type = "Email"asp-for="Email" class="form-control" />
+                            <span asp-validation-for="Email" class="text-danger"></span>
+                        </div><br>
+                        <div style="color:yellow; font-family:cabri; text-align:center; font-size: 25px;" class="form-group col-sm-6">
+                            <label asp-for="Password" class="control-label"></label>
+                            <input asp-for="Password" type="password" id="pass" name="password" class="form-control" />
+                            <span asp-validation-for="Password" class="text-danger"></span>
+                       </div><br><br>
+                        <div>
+                        
+                               <button style=" font-family:cabri; font-size: 20px;" href="#myModal" type="submit" value="Submit" class="btn btn-success trigger-btn col-sm-12" data-toggle="modal">Login</button>
+                        </div>
+                </form>
+            </div>
+        </div>
+
+    </div>
+</div>
+</body> *@

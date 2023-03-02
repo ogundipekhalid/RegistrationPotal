@@ -1,0 +1,108 @@
+@model MovieMvcDate.Models.Dto.RequestModel.CustomersResponseModel
+@* @model IEnumerable<MovieMvcDate.Models.Dto.RequestModel.CustomerDto> *@
+
+@* <div>
+    <h1> display ALL Cutomer</h1>
+    <p><a asp-action="GetAllCustomers"> GetALL Cutomer</a></p>
+</div>  *@
+
+    @* @if(ViewData["Title"] != null)
+    {
+        <h2>
+            @TempData["success"]
+        </h2>
+         if (TempData["failed"] != null)
+    {
+        <h2>@TempData["failed"]</h2>
+    }
+
+    } *@
+
+<div class="container p-3">
+<div class ="row pt-4">
+    <div class = "col-6">
+        <h2 class = "text-primary">All Customer</h2>
+    </div>
+    <div>
+    <table class="table table-bordered table-striped" style="width:100%">
+        <thead>
+            <tr>
+                <th>
+                    S/N
+                </th>
+                @* <th>
+                    UserId
+                </th> *@
+
+                <th>
+                    First Name
+                </th>
+                <th>
+                    Last Name
+                </th>
+                <th>
+                    Email
+                </th>
+                <th>
+                    Phone Number
+                </th>
+                <th>
+                    Balance
+                </th> 
+               
+            </tr>
+            @foreach (var cutomer in Model.Data)
+            {
+                <tr>
+                    <td>
+                        @cutomer.Id
+                    </td>
+                    @* <td>
+                        @cutomer.UserId
+                    </td> *@
+                    <td>
+                        @cutomer.FirstName
+                    </td>
+                    <td>
+                        @cutomer.LastName
+                    </td>
+                    <td>
+                        @cutomer.Email
+                    </td>
+                    <td>
+                        @cutomer.PhoneNumber
+                    </td>
+                   
+                    <td>
+                        @cutomer.Balance
+                    </td>
+        
+                    <td>
+                        @* <a onclick="myFuntion()" asp-controller = "Customer" asp-action = "Details" asp-route-Id = "@cutomer.Id"><i class ="bi bi-info-lg"></i> Details </a> *@
+                    </td>
+                    <td>
+                        <a onclick="myFuntion()" asp-controller = "Customer" asp-action = "UpdateCustomer" asp-route-Id = "@cutomer.Id"><i class ="bi bi-info-lg"></i> Edit </a>
+                    </td>
+                       <td>
+                    </td>
+                       <td>
+                        <a  asp-controller = "Customer" asp-action = "DeleteCustomer" asp-route-Id = "@cutomer.Id"><i class ="bi bi-trash"></i>Delete</a>
+                    </td>
+                    <script>
+                        function myFuntion()
+                        {
+                           alert("Do you want to proceed ?")  
+                        }
+                    </script>
+                </tr>
+            }
+              @* <span class="nav-item">
+                   <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="AddMoneyToWallet"><button
+                        class="fund"> Back
+                    </button></a>
+            </span> *@
+            </table>
+        </div>
+    </div>
+    </div>
+

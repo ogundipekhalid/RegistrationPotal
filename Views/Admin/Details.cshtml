@@ -1,0 +1,87 @@
+@using MovieMvcDate.Models.Dto.RequestModel
+@model UpdateAdminRequestModel
+@* @model MovieMvcDate.Models.Dto.RequestModel.AdminDto *@
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<div>
+    <h6>Details of admin</h6>
+    <hr/>
+   <dl>
+    <dt>
+    </dt>
+         <dt>
+            <h4>@Html.DisplayNameFor( model=>model.FirstName): </h4>
+        </dt>
+         <dd>
+            <h4>@Html.DisplayFor( model=>model.FirstName ) </h4>
+        </dd>
+        <dt>
+            <h4>@Html.DisplayNameFor( model=>model.LastName ) :</h4>
+        </dt>
+          <dd>
+            <h4>@Html.DisplayFor(model =>model.LastName) </h4>
+        </dd>
+         <dt>
+            <h4>@Html.DisplayNameFor(model => model.Email): </h4>
+        </dt>
+          <dd>
+            <h4>@Html.DisplayFor(model=> model.Email) </h4>
+        </dd>
+        </dt>
+          <dd>
+            <h4>@Html.DisplayFor(model=> model.PhoneNumber) : </h4>
+        </dd>
+        </dt>
+          <dd>
+            <h4>@Html.DisplayFor(model=> model.PhoneNumber) </h4>
+        </dd>
+        <dt>
+          <h4>@Html.DisplayFor(model => model.Password) :  </h4>
+        </dt>
+        <dd>
+          <h4>@Html.DisplayFor(model => model.Password) </h4>
+   </dl>
+</div>
+   <button style="background-color: slateblue;" ><a asp-controller= "Admin" asp-action="GetAllAdmin">Back to List</a></button>
+
+    @* <form asp-action="Details" asp-route-AdminId=@Model.Id>
+        <input type="submit" value="Details" class="btn btn-danger" /> 
+        <a asp-action="Index">Back to List</a>
+    </form>  *@
+</div>
+
+
+
+@* <div>
+    <div>
+        <label> *@
+        @* NAME:@Model.Data.User.Name *@
+        
+    @* </label>
+    </div>
+
+    <div>
+        <label>
+        GENDER:@Model.Data.Gender
+    </label>
+    </div>
+    <div>
+        <label>
+        NEXT OF KIN:@Model.Data.NextOfKin
+    </label>
+    </div> *@
+    @* <div>
+        <label>
+        PHONENUMBER:@Model.Data.User.PhoneNumber
+    </label>
+    </div>
+    <div>
+        <label>
+        PHONENUMBER:@Model.Data.User.Email
+    </label>
+    </div> *@
+
+@* </div>  *@
